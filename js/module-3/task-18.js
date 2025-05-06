@@ -1,15 +1,13 @@
-function letNuber(start, end) {
-    let number = 0;
-    for (let i = start; i <= end; i++) {
-        if (i % 5 === 0) {
-            number = i;
-            break;
-        }
+function createReversedArray() {
+    const args = Array.from(arguments);
+    const array = [];
+    for (const arg of args) {
+        array.push(arg);
     }
-    return number;
+    return array.reverse();
 }
 
 // Test cases
-console.log(letNuber(6, 17)); // 10
-console.log(letNuber(17, 25)); // 20
-console.log(letNuber(2, 11)); // 5
+console.log(createReversedArray(12, 85, 37, 4)); // [4, 37, 85, 12]
+console.log(createReversedArray(164, 48, 291)); // [291, 48, 164]
+console.log(createReversedArray(412, 371, 94, 63, 176)); // [176, 63, 94, 371, 412]

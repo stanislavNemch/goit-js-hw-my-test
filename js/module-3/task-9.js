@@ -1,13 +1,10 @@
-function getSubstring(string, length) {
-    if (string.length <= length) {
-        return string;
-    }
-    return string.slice(0, length);
-}
+const fruits = ["apple", "plum", "pear", "orange", "banana"];
+
+const firstTwoEls = fruits.slice(0, 2);
+const nonExtremeEls = fruits.slice(1, -1);
+const lastThreeEls = fruits.slice(-3);
 
 // Test cases
-console.log(getSubstring("Hello world", 3)); // Expected output: "Hel"
-console.log(getSubstring("Hello world", 5)); // Expected output: "Hello"
-console.log(getSubstring("Hello world", 8)); // Expected output: "Hello wo"
-console.log(getSubstring("Hello world", 11)); // Expected output: "Hello world"
-console.log(getSubstring("Hello world", 0)); // Expected output: ""
+console.log(firstTwoEls); // ["apple", "plum"]
+console.log(nonExtremeEls); // ["plum", "pear", "orange"]
+console.log(lastThreeEls); // ["pear", "orange", "banana"]

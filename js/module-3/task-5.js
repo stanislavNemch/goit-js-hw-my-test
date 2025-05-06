@@ -1,19 +1,9 @@
-function getSubscriptionPrice(type) {
-    switch (type) {
-        case "starter":
-            return 0;
-        case "professional":
-            return 20;
-        case "organization":
-            return 50;
-        default:
-            return "Invalid subscription type!";
-    }
+function getLastElementMeta(array) {
+    return [array.length - 1, array[array.length - 1]];
 }
 
 // Test cases
-console.log(getSubscriptionPrice("starter")); // 0
-console.log(getSubscriptionPrice("professional")); // 20
-console.log(getSubscriptionPrice("organization")); // 50
-console.log(getSubscriptionPrice("random")); // Invalid subscription type!
-console.log(getSubscriptionPrice("premium")); // Invalid subscription type!
+console.log(getLastElementMeta(["apple", "peach", "pear", "banana"])); // [3, "banana"]
+console.log(getLastElementMeta(["apple", "peach", "pear"])); // [2, "pear"]
+console.log(getLastElementMeta(["apple", "peach"])); // [1, "peach"]
+console.log(getLastElementMeta(["apple"])); // [0, "apple"]

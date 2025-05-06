@@ -1,9 +1,17 @@
-function createFileName(name, ext) {
-    // Видаляємо зайві пробіли з name і формуємо повне ім'я файлу
-    return `${name.trim()}.${ext}`;
+function getEvenNumbers(start, end) {
+    const evenNumbers = [];
+
+    for (let i = start; i <= end; i++) {
+        if (i % 2 === 0) {
+            evenNumbers.push(i);
+        }
+    }
+    return evenNumbers;
 }
 
-// Приклади використання
-console.log(createFileName("order ", "txt")); // "order.txt"
-console.log(createFileName(" finance ", "xml")); // "finance.xml"
-console.log(createFileName("report", "pdf")); // "report.pdf"
+// Test cases
+console.log(getEvenNumbers(2, 5)); // [2, 4]
+console.log(getEvenNumbers(3, 11)); // [4, 6, 8, 10]
+console.log(getEvenNumbers(6, 12)); // [6, 8, 10, 12]
+console.log(getEvenNumbers(8, 8)); // [8]
+console.log(getEvenNumbers(7, 7)); // []

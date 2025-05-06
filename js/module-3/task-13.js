@@ -1,18 +1,12 @@
-function getFileName(file) {
-    // Знаходимо індекс крапки в імені файлу
-    const dotIndex = file.indexOf(".");
-
-    // Якщо крапки немає, повертаємо ім'я файлу без змін
-    if (dotIndex === -1) {
-        return file;
+function calculateTotalPrice(order) {
+    let total = 0;
+    for (let i = 0; i < order.length; i++) {
+        total += order[i];
     }
-
-    // Якщо крапка є, повертаємо підрядок до крапки
-    return file.slice(0, dotIndex);
+    return total;
 }
 
-// Приклади використання
-console.log(getFileName("styles.css")); // "styles"
-console.log(getFileName("app.js")); // "app"
-console.log(getFileName("styles")); // "styles"
-console.log(getFileName("app")); // "app"
+// Test cases
+console.log(calculateTotalPrice([12, 85, 37, 4])); // 138
+console.log(calculateTotalPrice([164, 48, 291])); // 503
+console.log(calculateTotalPrice([412, 371, 94, 63, 176])); // 1116

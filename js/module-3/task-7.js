@@ -1,9 +1,8 @@
-function checkAccess(subType) {
-    return subType === "pro" || subType === "vip";
+function getLength(array) {
+    return array.join("").length;
 }
 
 // Test cases
-console.log(checkAccess("pro")); // true
-console.log(checkAccess("vip")); // true
-console.log(checkAccess("starter")); // false
-console.log(checkAccess("free")); // false
+console.log(getLength(["Mango", "hurries", "to", "the", "train"])); // 22
+console.log(getLength(["M", "a", "n", "g", "o"])); // 5
+console.log(getLength(["top", "picks", "for", "you"])); // 114

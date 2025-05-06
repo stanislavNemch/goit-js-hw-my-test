@@ -1,13 +1,12 @@
-function calculateEvenTotal(number) {
+function calculateTotalPrice(order) {
     let total = 0;
-    for (let i = 0; i <= number; i += 2) {
-        total += i;
+    for (const number of order) {
+        total += number;
     }
     return total;
 }
 
 // Test cases
-console.log(calculateEvenTotal(3)); // 6
-console.log(calculateEvenTotal(7)); // 12
-console.log(calculateEvenTotal(0)); // 0
-console.log(calculateEvenTotal(1)); // 0
+console.log(calculateTotalPrice([12, 85, 37, 4])); // 138
+console.log(calculateTotalPrice([164, 48, 291])); // 503
+console.log(calculateTotalPrice([412, 371, 94, 63, 176])); // 1116

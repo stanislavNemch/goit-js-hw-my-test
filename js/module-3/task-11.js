@@ -1,11 +1,14 @@
-function checkForName(fullName, firstName) {
-    return fullName.toLowerCase().includes(firstName.toLowerCase());
+function getSlice(array, value) {
+    const index = array.indexOf(value);
+    if (index === -1) {
+        return [];
+    }
+    return array.slice(0, index).concat(array[index]);
 }
 
 // Test cases
-console.log(checkForName("Jason Neis", "Jason")); // true
-console.log(checkForName("Jason Neis", "jAsOn")); // true
-console.log(checkForName("Jason Neis", "Jacob")); // false
-console.log(checkForName("Caty Stars", "Caty")); // true
-console.log(checkForName("Caty Stars", "cAtY")); // true
-console.log(checkForName("Caty Stars", "Andromeda")); // false
+console.log(getSlice(["Mango", "Poly", "Ajax"], "Poly")); // ["Mango", "Poly"]
+console.log(getSlice(["Mango", "Poly", "Ajax"], "Ajax")); // ["Mango", "Poly", "Ajax"]
+console.log(getSlice(["Mango", "Poly", "Ajax"], "Mango")); // ["Mango"]
+console.log(getSlice(["Mango", "Poly", "Ajax"], "Jacob")); // []
+console.log(getSlice(["Mango", "Poly", "Ajax"], "Casey")); // []

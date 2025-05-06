@@ -1,13 +1,9 @@
-function checkStorage(available, ordered) {
-    if (available >= ordered) {
-        return "Order is processed, our manager will contact you";
-    } else {
-        return "Not enough goods in stock!";
-    }
-}
+const fruits = ["apple", "plum", "pear", "orange"];
 
-// Testing the function
-console.log(checkStorage(100, 50)); // "Order is processed, our manager will contact you"
-console.log(checkStorage(100, 130)); // "Not enough goods in stock!"
-console.log(checkStorage(200, 20)); // "Order is processed, our manager will contact you"
-console.log(checkStorage(200, 200)); // "Order is processed, our manager will contact you"
+const firstElement = fruits[0];
+const secondElement = fruits[1];
+const lastElement = fruits[fruits.length - 1];
+
+console.log(firstElement); // apple
+console.log(secondElement); // plum
+console.log(lastElement); // orange

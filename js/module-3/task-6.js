@@ -1,9 +1,8 @@
-function isNumberInRange(start, end, number) {
-    return number >= start && number <= end;
+function getExtremeElements(array) {
+    return [array[0], array[array.length - 1]];
 }
 
 // Test cases
-console.log(isNumberInRange(10, 30, 17)); // true
-console.log(isNumberInRange(10, 30, 5)); // false
-console.log(isNumberInRange(20, 50, 24)); // true
-console.log(isNumberInRange(20, 50, 76)); // false
+console.log(getExtremeElements([1, 2, 3, 4, 5])); // [1, 5]
+console.log(getExtremeElements(["Earth", "Mars", "Venus"])); // ["Earth", "Venus"]
+console.log(getExtremeElements(["apple", "peach", "pear", "banana"])); // ["apple", "banana"]
